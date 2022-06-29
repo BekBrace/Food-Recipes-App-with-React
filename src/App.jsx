@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
-import Recipe from './components/Recipe';
+import NAVBAR from './components/NAVBAR';
+import Recipe from './components/RECIPE';
 
 const App = () => {
 const APP_ID = "f6baeebb";
@@ -32,6 +33,7 @@ const getSearch = e => {
 
 return (
 	<div className="App">
+	<NAVBAR/>
 	<form className="search-form" onSubmit={getSearch} >
 		<input className="search-bar" type="text" value={search}
 			onChange={updateSearch} />
@@ -54,5 +56,4 @@ return (
 	</div>
   );
 }
-
 export default App;
